@@ -1,0 +1,16 @@
+C:\Users\harry\Desktop\c#\NoteBooks\4. Console Input and Output\_Exercises\userInputRequired\obj\Debug\net5.0\userInputRequired.csproj.AssemblyReference.cache
+C:\Users\harry\Desktop\c#\NoteBooks\4. Console Input and Output\_Exercises\userInputRequired\obj\Debug\net5.0\userInputRequired.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\harry\Desktop\c#\NoteBooks\4. Console Input and Output\_Exercises\userInputRequired\obj\Debug\net5.0\userInputRequired.AssemblyInfoInputs.cache
+C:\Users\harry\Desktop\c#\NoteBooks\4. Console Input and Output\_Exercises\userInputRequired\obj\Debug\net5.0\userInputRequired.AssemblyInfo.cs
+C:\Users\harry\Desktop\c#\NoteBooks\4. Console Input and Output\_Exercises\userInputRequired\obj\Debug\net5.0\userInputRequired.csproj.CoreCompileInputs.cache
+C:\Users\harry\Desktop\c#\NoteBooks\4. Console Input and Output\_Exercises\userInputRequired\bin\Debug\net5.0\userInputRequired.exe
+C:\Users\harry\Desktop\c#\NoteBooks\4. Console Input and Output\_Exercises\userInputRequired\bin\Debug\net5.0\userInputRequired.deps.json
+C:\Users\harry\Desktop\c#\NoteBooks\4. Console Input and Output\_Exercises\userInputRequired\bin\Debug\net5.0\userInputRequired.runtimeconfig.json
+C:\Users\harry\Desktop\c#\NoteBooks\4. Console Input and Output\_Exercises\userInputRequired\bin\Debug\net5.0\userInputRequired.runtimeconfig.dev.json
+C:\Users\harry\Desktop\c#\NoteBooks\4. Console Input and Output\_Exercises\userInputRequired\bin\Debug\net5.0\userInputRequired.dll
+C:\Users\harry\Desktop\c#\NoteBooks\4. Console Input and Output\_Exercises\userInputRequired\bin\Debug\net5.0\userInputRequired.pdb
+C:\Users\harry\Desktop\c#\NoteBooks\4. Console Input and Output\_Exercises\userInputRequired\obj\Debug\net5.0\userInputRequired.dll
+C:\Users\harry\Desktop\c#\NoteBooks\4. Console Input and Output\_Exercises\userInputRequired\obj\Debug\net5.0\refint\userInputRequired.dll
+C:\Users\harry\Desktop\c#\NoteBooks\4. Console Input and Output\_Exercises\userInputRequired\obj\Debug\net5.0\userInputRequired.pdb
+C:\Users\harry\Desktop\c#\NoteBooks\4. Console Input and Output\_Exercises\userInputRequired\obj\Debug\net5.0\userInputRequired.genruntimeconfig.cache
+C:\Users\harry\Desktop\c#\NoteBooks\4. Console Input and Output\_Exercises\userInputRequired\obj\Debug\net5.0\ref\userInputRequired.dll

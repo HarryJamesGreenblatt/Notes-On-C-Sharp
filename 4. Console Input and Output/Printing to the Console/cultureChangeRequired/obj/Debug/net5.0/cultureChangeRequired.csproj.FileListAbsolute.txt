@@ -1,0 +1,16 @@
+C:\Users\harry\Desktop\c#\NoteBooks\4. Console Input and Output\Printing to the Console\cultureChangeRequired\obj\Debug\net5.0\cultureChangeRequired.csproj.AssemblyReference.cache
+C:\Users\harry\Desktop\c#\NoteBooks\4. Console Input and Output\Printing to the Console\cultureChangeRequired\obj\Debug\net5.0\cultureChangeRequired.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\harry\Desktop\c#\NoteBooks\4. Console Input and Output\Printing to the Console\cultureChangeRequired\obj\Debug\net5.0\cultureChangeRequired.AssemblyInfoInputs.cache
+C:\Users\harry\Desktop\c#\NoteBooks\4. Console Input and Output\Printing to the Console\cultureChangeRequired\obj\Debug\net5.0\cultureChangeRequired.AssemblyInfo.cs
+C:\Users\harry\Desktop\c#\NoteBooks\4. Console Input and Output\Printing to the Console\cultureChangeRequired\obj\Debug\net5.0\cultureChangeRequired.csproj.CoreCompileInputs.cache
+C:\Users\harry\Desktop\c#\NoteBooks\4. Console Input and Output\Printing to the Console\cultureChangeRequired\bin\Debug\net5.0\cultureChangeRequired.exe
+C:\Users\harry\Desktop\c#\NoteBooks\4. Console Input and Output\Printing to the Console\cultureChangeRequired\bin\Debug\net5.0\cultureChangeRequired.deps.json
+C:\Users\harry\Desktop\c#\NoteBooks\4. Console Input and Output\Printing to the Console\cultureChangeRequired\bin\Debug\net5.0\cultureChangeRequired.runtimeconfig.json
+C:\Users\harry\Desktop\c#\NoteBooks\4. Console Input and Output\Printing to the Console\cultureChangeRequired\bin\Debug\net5.0\cultureChangeRequired.runtimeconfig.dev.json
+C:\Users\harry\Desktop\c#\NoteBooks\4. Console Input and Output\Printing to the Console\cultureChangeRequired\bin\Debug\net5.0\cultureChangeRequired.dll
+C:\Users\harry\Desktop\c#\NoteBooks\4. Console Input and Output\Printing to the Console\cultureChangeRequired\bin\Debug\net5.0\cultureChangeRequired.pdb
+C:\Users\harry\Desktop\c#\NoteBooks\4. Console Input and Output\Printing to the Console\cultureChangeRequired\obj\Debug\net5.0\cultureChangeRequired.dll
+C:\Users\harry\Desktop\c#\NoteBooks\4. Console Input and Output\Printing to the Console\cultureChangeRequired\obj\Debug\net5.0\refint\cultureChangeRequired.dll
+C:\Users\harry\Desktop\c#\NoteBooks\4. Console Input and Output\Printing to the Console\cultureChangeRequired\obj\Debug\net5.0\cultureChangeRequired.pdb
+C:\Users\harry\Desktop\c#\NoteBooks\4. Console Input and Output\Printing to the Console\cultureChangeRequired\obj\Debug\net5.0\cultureChangeRequired.genruntimeconfig.cache
+C:\Users\harry\Desktop\c#\NoteBooks\4. Console Input and Output\Printing to the Console\cultureChangeRequired\obj\Debug\net5.0\ref\cultureChangeRequired.dll

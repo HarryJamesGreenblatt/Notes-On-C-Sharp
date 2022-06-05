@@ -1,0 +1,23 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v5.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v5.0": {
+      "cultureChangeRequired/1.0.0": {
+        "runtime": {
+          "cultureChangeRequired.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "cultureChangeRequired/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}
