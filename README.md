@@ -1,15 +1,3 @@
-<style>
-    td{
-        border: none !important;
-    }
-
-    #playersGuide{
-        width: 510px;
-        height: 588px;
-    }
-</style>
-
-
 # Notes On C-Sharp   
    
 So here's the thing.   
@@ -24,8 +12,8 @@ The following **two texts** offer, in my oppinion, the most **complete explainat
 <table>
     <tbody>
         <tr>
-            <td><img src="_img/BulgarianCSharpBook.jpg"></img></td>
-            <td><img id="playersGuide" src="_img/CSharpPlayersGuide.jpg"></img></td>
+            <td style="border: none !important;"><img src="_img/BulgarianCSharpBook.jpg"></img></td>
+            <td style="border: none !important;"><img src="_img/CSharpPlayersGuide.jpg" style="width: 510px; height: 588px;"></img></td>
         </tr>
     </tbody>
 </table>
