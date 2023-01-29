@@ -7,7 +7,7 @@ it unfortunately happens to have some of the worst, most non-comprehensive, obno
    
 However,
 
-The following **two texts** offer, in my oppinion, the most **complete explaination of the** $C\#$ **language** that one can likely find anywhere on the internet.
+The following **two texts** offer, in my oppinion, the most **complete explaination of the C# language** that one can likely find anywhere on the internet.
 
 <table>
     <tbody>
