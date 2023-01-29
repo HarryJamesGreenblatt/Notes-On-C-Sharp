@@ -11,11 +11,11 @@ The following **two texts** offer, in my oppinion, the most **complete explainat
 
 <table>
     <tbody>
-        <tr style="border: none !important;">
-            <td style="border: none !important;"><img src="_img/BulgarianCSharpBook.jpg"></img></td>
-            <td style="border: none !important;"><img src="_img/CSharpPlayersGuide.jpg" style=""></img></td>
+        <tr>
+            <td><img src="_img/BulgarianCSharpBook.jpg"></img></td>
+            <td><img src="_img/CSharpPlayersGuide.jpg" style=""></img></td>
         </tr>
     </tbody>
 </table>
 
-This repo is a **collection of notes and code examples** inspired by these resources, and brought to life using $.NET\,Interactive$ a.k.a $Polyglot\,Notebooks$ introduced with the release $.NET\,6$.  
+This repo is a **collection of notes and code examples** inspired by these resources, and brought to life using $\textit{.NET Interactive}$ a.k.a $textit{Polyglot Notebooks}$ introduced with the release $\textit{.NET 6}$.  
