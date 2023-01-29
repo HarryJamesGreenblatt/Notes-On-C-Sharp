@@ -11,9 +11,9 @@ The following **two texts** offer, in my oppinion, the most **complete explainat
 
 <table>
     <tbody>
-        <tr style="border: none;">
-            <td style="border: none;"><img src="_img/BulgarianCSharpBook.jpg"></img></td>
-            <td style="border: none;"><img src="_img/CSharpPlayersGuide.jpg" style=""></img></td>
+        <tr style="border: none !important;">
+            <td style="border: none !important;"><img src="_img/BulgarianCSharpBook.jpg"></img></td>
+            <td style="border: none !important;"><img src="_img/CSharpPlayersGuide.jpg" style=""></img></td>
         </tr>
     </tbody>
 </table>
