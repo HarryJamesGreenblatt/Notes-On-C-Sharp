@@ -3,7 +3,7 @@
 So here's the thing.   
 
 Although C# is nothing short of a $\textit{statically typed, multi-purpose, and  multi-paradigm}$ gift to the world,    
-it unfortunately happens to have some of the worst, most non-comprehensive, obnoxiously verbose, and douchiest documentation in the game (Ok, maybe Haskel and/or COBAL might have it beat).
+it unfortunately happens to have some of the worst, most non-comprehensive, obnoxiously verbose, and douchiest documentation in the game (Ok, maybe Haskell and/or COBAL might have it beat).
    
 However,
 
