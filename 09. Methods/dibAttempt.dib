@@ -1,0 +1,421 @@
+#!meta
+
+{"kernelInfo":{"defaultKernelName":"csharp","items":[{"aliases":[],"name":"csharp"}]}}
+
+#!markdown
+
+# 9. Methods
+
+#!markdown
+
+## Working with Delegates
+---
+
+#!markdown
+
+What if we had a type of variable that we could put a method in? 
+What if we could **assign a method to a variable** and pass it around, just like we’ve done with all of our other types of data? 
+
+$C\#$ has this feature, and it is called a **delegate**.   
+
+In $C\#$, **delegates** are similar to pointers to functions, in C or C++. A **delegate** is a **reference type variable that holds the reference to a method**. The reference can be changed at runtime.
+
+**Delegates** are especially used for implementing **events** and the **call-back methods**. All **delegates** are implicitly derived from the [`System.Delegate` class](https://learn.microsoft.com/en-us/dotnet/api/system.delegate?view=net-7.0).
+
+#!markdown
+
+<br>
+
+#!markdown
+
+### Declaring a Delegate
+
+#!markdown
+
+Below, we generalize the syntax for declaring a delegate:
+
+#!markdown
+
+```c#
+[access_modifiers] delegate delegateType DelegateName( [ parameters_list ] )
+```
+
+#!markdown
+
+To provide a specific example, let's consider the following `delagate` representing a general **arithmetic operation between two integer values**:
+
+#!csharp
+
+public delegate int ArithmeticOperation( int a, int b );
+
+#!markdown
+
+<br>
+
+#!markdown
+
+### Invoking a Delegate
+
+#!markdown
+
+Now that we have provided the declaration of this `delegate` variable, we can go on to declare one or more methods which meet the specifications defined by the `ArithmeticOperation` signature outlined above, as follows:
+
+#!csharp
+
+public static int Add( int a, int b )
+{
+    return a + b;
+}
+
+#!csharp
+
+public static int Subtract( int a, int b )
+{
+    return a - b;
+}
+
+#!csharp
+
+public static int Multiply( int a, int b )
+{
+    return a * b;
+}
+
+#!csharp
+
+public static int Divide( int a, int b )
+{
+    return a / b;
+}
+
+#!markdown
+
+<br>
+
+#!markdown
+
+With the declaration of the methods above, we can now instantiate the `ArithmeticOperation` delegate and assign any of those methods to it in kind. 
+    
+For example, we say we wanted to assign the `Add()` method, we may  do so as follows:
+
+#!csharp
+
+ArithmeticOperation doArithmetic = Add;
+
+#!markdown
+
+<br>
+
+#!markdown
+
+At this stage, the `doArithmetic` variable will behave as a method which **encapsulates** the instructions local to the `Add()` method which we previously defined:
+
+#!csharp
+
+// 4 + 4 = 8 
+doArithmetic( 4, 4 )
+
+#!markdown
+
+<br>
+
+#!markdown
+
+### Chaining Delegates Together
+
+#!markdown
+
+What if we wanted to make use of the other arithmetic operations that we defined methods for (i.e. subtraction, multiplication, and division?  
+
+One thing we can do is to simply overwrite the existing `doArithmetic` delegate each time we wanted to implement a new arithmetic operation, as so:
+
+#!csharp
+
+doArithmetic = Subtract;
+
+#!csharp
+
+// 4 - 4 = 0
+doArithmetic( 4, 4 )
+
+#!csharp
+
+doArithmetic = Multiply;
+
+#!csharp
+
+// 4 * 4 = 16
+doArithmetic( 4, 4 )
+
+#!csharp
+
+doArithmetic = Divide;
+
+#!csharp
+
+// 4 / 4 = 1
+doArithmetic( 4, 4 )
+
+#!markdown
+
+<br>
+
+#!markdown
+
+But we also have the option to perform a technique known as **Multicasting**, which overloads the `+` and `-` operators to either **chain** or **unchain** these **delagates**, respectively.
+
+This feature, however, comes with a *significant caveat*, which will present itself after attempting to chain each of the arithmetic operations together sequentially:
+
+#!csharp
+
+doArithmetic = Add;
+doArithmetic += Subtract;
+doArithmetic += Multiply;
+doArithmetic += Divide;
+
+#!csharp
+
+doArithmetic( 4, 4 )
+
+#!markdown
+
+Above, we observe that **the only value returned is from the division operation**! 
+
+This is because when chained delegates return anything other than `void`, **only the last value in the chain is returned**.
+
+#!markdown
+
+<br>
+
+#!markdown
+
+To account for this caveat, let's provide a different delegate which returns `void`, rather than with an `int`, yet still takes the same paramters as our previously defined implementation: 
+
+#!csharp
+
+public delegate void UntypedArithmeticOperation( int a, int b );
+
+#!markdown
+
+<br>
+
+#!markdown
+
+Now, let's adapt our arithmetic methods in such a way that they now perscribe to the new signature of the `UntypedArithmeticOperation`:
+
+#!csharp
+
+public static void Add( int a, int b )
+{
+    Console.WriteLine( a + b );
+}
+
+#!csharp
+
+public static void Subtract( int a, int b )
+{
+    Console.WriteLine( a - b );
+}
+
+#!csharp
+
+public static void Multiply( int a, int b )
+{
+    Console.WriteLine( a * b );
+}
+
+#!csharp
+
+public static void Divide( int a, int b )
+{
+    Console.WriteLine( a / b );
+}
+
+#!markdown
+
+<br>
+
+#!markdown
+
+Let's now instantiate our new `UntypedArithmeticOperation` delegate, initialize it with the `Add()` method, and then sequentially chain each of the remaining arithmetic operation methods into it:
+
+#!csharp
+
+UntypedArithmeticOperation printArithmetic = Add;
+
+#!csharp
+
+printArithmetic += Subtract;
+printArithmetic += Multiply;
+printArithmetic += Divide;
+
+#!markdown
+
+<br>
+
+#!markdown
+
+This time around, we get the expected result, where *all* of the chained methods get executed sequentially in kind:
+
+#!csharp
+
+printArithmetic( 4, 4 )
+
+#!markdown
+
+<br>
+
+#!markdown
+
+### The `Action<T>`, `Func<in T, out T>` and `Predicate<T>` Delegates
+
+#!markdown
+
+While we can certainly make your own delegate types whenever we need to, in practice, this is rare (and probably unnecessary for most cases). 
+   
+That's because, included with the $.NET\,Platform$ is a collection of delegates that are already defined for you. These delegates are generic, so they are very flexible, and cover most situations. 
+
+These are the [Action](https://www.tutorialsteacher.com/csharp/csharp-action-delegate) and [Func](https://www.tutorialsteacher.com/csharp/csharp-func-delegate) delegates. 
+
+The `Action<T>` delegates all have a `void` return type, while the `Func<in T, out T>` delegates have a generic return type.
+
+#!markdown
+
+<br>
+
+#!markdown
+
+#### `Action<T>`
+
+#!markdown
+
+The following is a generalized form of the `Action<T>` delegate:
+
+#!markdown
+
+```c#
+Action < T1, ..., T16 > delegateName = PredefinedOrAnonymousMethod;
+```
+
+#!markdown
+
+Observe that it is possible to provide up to 16 input parameters of varying types.
+
+#!markdown
+
+To exemplify this useful construct, rather than having implemented the `UntypedAritmeticOperation` delegate, as we did previously, we could have done the exact same thing using the `Action<T>` delegate instead, as demonstrated below:
+
+#!csharp
+
+Action<int,int> printArithmetic = Add;
+
+#!csharp
+
+printArithmetic += Subtract;
+printArithmetic += Multiply;
+printArithmetic += Divide;
+
+#!csharp
+
+printArithmetic( 4, 4 )
+
+#!markdown
+
+Note that, rather than having used our pre-existing arithmetic operational methods, we could have alternatively assigned our `Action<T>` **Anonymous Methods** using either `delgate` keywords, or **Lamba Expressions**.
+
+#!markdown
+
+<br>
+
+#!markdown
+
+#### `Func<in T, out T>`
+
+#!markdown
+
+The following is a generalized form of the `Func<in T, out T>` delegate:
+
+#!markdown
+
+```c#
+Func < T1, ..., T16, out T > delegateName = PredefinedOrAnonymousMethod;
+```
+
+#!markdown
+
+Observe that, much like with `Action<T>,` it is possible to provide up to 16 input parameters of varying types, however it is **required to additionally provide a final output parameter specifyung the return type**
+
+#!markdown
+
+Similarly, we can also simplify our original, typed `doArithmetic` implementation using the `Func<in T, out T>` delegate by assigning to it one of the operational methods we've previously defined. 
+   
+However, since we have effectively overwritten those methods in favor of redefining them to return `void`, as previously explained, rather than re-redifing them, we may alternatively assign `Func<in T, out T>` with an **Anonymous Method**, either using the `delegate` keyword, or by using a **Lamba Expression**
+
+#!csharp
+
+// Use the delegate keyword to assign an anonymous Multipication method
+// to the doArithmetic variable
+Func<int, int, int> doArithmetic = delegate( int a, int b )
+{
+    return a * b;
+};
+
+#!csharp
+
+// 4 * 4 = 16
+doArithmetic( 4, 4 )
+
+#!csharp
+
+// Use a Lamba Expression to assign an anonymous Division method
+// to the doArithmetic variable
+Func<int, int, int> doArithmetic = ( int a, int b ) => { return a / b; };
+
+#!csharp
+
+// 4 / 4 = 1
+doArithmetic( 4, 4 )
+
+#!markdown
+
+<br>
+
+#!markdown
+
+#### `Predicate<T>`
+
+#!markdown
+
+One final generic delegate type is the `Predicate<T>`, which represents a method containing a set of criteria that checks whether the passed parameter meets that criteria. 
+   
+A `Predicate<T>` delegate **can take only one input parameter** and  **must return a boolean** - `true` or `false`.
+
+#!markdown
+
+The following is a generalized form of the `Predicate<T>` delegate:
+
+#!markdown
+
+```c#
+Predicate < T > delegateName = PredefinedOrAnonymousMethod;
+```
+
+#!markdown
+
+Let's suppose we wanted to check if the `doArithmetic` method, which we have now adapted to perform an arithmetic division operation between two arguments, returns a result which is Even, we can do so, in similar fashion to the other delegates discussed, by assigning the `Predicate<T>` either a **pre-existing** or **Anonymous Method** that **returns a boolean value**, as follows:
+
+#!csharp
+
+public static bool IsEven( int result )
+{
+    return result % 2 == 0;
+}
+
+#!csharp
+
+Predicate <int> isEven = IsEven;  
+
+#!csharp
+
+// 4 / 4 = 1, which is NOT even
+isEven( doArithmetic( 4, 4 ) )
